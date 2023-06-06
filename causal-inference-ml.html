@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to your Jupyter Book &#8212; Reliable ML</title>
+    <title>Causal Inference in ML &#8212; Reliable ML</title>
   
   
   
@@ -61,10 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'causal-inference-ml';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="next" title="MLOps" href="mlops.html" />
+    <link rel="prev" title="Interpretable ML" href="interpretable-ml.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -130,7 +131,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item">
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="index.html">
   
   
   
@@ -149,16 +150,36 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
-                    Welcome to your Jupyter Book
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    О книге
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Введение</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Концепция Reliable ML</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Концепция Reliable ML: бизнес</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="project-selection.html">Выбор ML-проекта</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml-design-doc.html">ML Design Doc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ml-system-design.html">ML System Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prototype.html">Разработка прототипа</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylot.html">Пилотирование и оценка эффекта</a></li>
+<li class="toctree-l1"><a class="reference internal" href="delivery.html">Внедрение решения</a></li>
+<li class="toctree-l1"><a class="reference internal" href="monitoring.html">Мониторинг модельного риска</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Концепция Reliable ML: техника</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="interpretable-ml.html">Interpretable ML</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Causal Inference in ML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mlops.html">MLOps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data-sentric-ai.html">Data Centric AI</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Тренды будущего</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="trends.html">Тренды</a></li>
 </ul>
 
     </div>
@@ -230,7 +251,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/promsoft/Reliable ML/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/promsoft/Reliable ML/issues/new?title=Issue%20on%20page%20%2Fcausal-inference-ml.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -260,7 +281,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/causal-inference-ml.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -329,7 +350,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -340,11 +363,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to your Jupyter Book</h1>
+    <h1>Causal Inference in ML</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -354,20 +385,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Permalink to this heading">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-</ul>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="causal-inference-in-ml">
+<h1>Causal Inference in ML<a class="headerlink" href="#causal-inference-in-ml" title="Permalink to this heading">#</a></h1>
+<p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
+in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
+called <strong>MyST Markdown</strong>.
+This is a simple file to help you get started and show off some syntax.</p>
+<section id="what-is-myst">
+<h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Permalink to this heading">#</a></h2>
+<p>MyST stands for “Markedly Structured Text”. It
+is a slight variation on a flavor of markdown called “CommonMark” markdown,
+with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
+in the Sphinx ecosystem.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -401,12 +431,21 @@ It does not go in-depth into any particular topic - check out <a class="referenc
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="interpretable-ml.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Interpretable ML</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="markdown.html"
+       href="mlops.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">MLOps</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -419,6 +458,20 @@ It does not go in-depth into any particular topic - check out <a class="referenc
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
