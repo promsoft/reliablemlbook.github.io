@@ -1,0 +1,10 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - jupyter-book clean reliablemlbook/
+      - jupyter-book build reliablemlbook/
+    silent: false
