@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>ML Design Doc &#8212; Reliable ML</title>
+    <title>ML System Design Doc &#8212; Reliable ML</title>
   
   
   
@@ -163,7 +163,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reliable ML: бизнес</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="project-selection.html">Выбор ML-проекта</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">ML Design Doc</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">ML System Design Doc</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ml-system-design.html">ML System Design</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prototype.html">Разработка прототипа</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pylot.html">Пилотирование и оценка эффекта</a></li>
@@ -363,7 +363,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>ML Design Doc</h1>
+    <h1>ML System Design Doc</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -373,7 +373,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Что такое ML System Design Doc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Зачем нужен ML System Design Doc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Как составить ML System Design Doc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reliable-ml">Примеры дизайн-документов по шаблону Reliable ML</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Как обратиться в Reliable ML за поддержкой</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Материалы для дополнительного погружения в тему</a></li>
 </ul>
             </nav>
         </div>
@@ -385,18 +390,61 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ml-design-doc">
-<h1>ML Design Doc<a class="headerlink" href="#ml-design-doc" title="Permalink to this heading">#</a></h1>
-<p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
-in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
-called <strong>MyST Markdown</strong>.
-This is a simple file to help you get started and show off some syntax.</p>
-<section id="what-is-myst">
-<h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Permalink to this heading">#</a></h2>
-<p>MyST stands for “Markedly Structured Text”. It
-is a slight variation on a flavor of markdown called “CommonMark” markdown,
-with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
-in the Sphinx ecosystem.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="ml-system-design-doc">
+<h1>ML System Design Doc<a class="headerlink" href="#ml-system-design-doc" title="Permalink to this heading">#</a></h1>
+<p><em><a class="reference external" href="https://github.com/IrinaGoloshchapova/ml_system_design_doc_ru/blob/main/ML_System_Design_Doc_Template.md">Шаблон документа для дизайна ML-систем</a> от телеграм-канала <a class="reference external" href="https://t.me/reliable_ml">Reliable ML</a></em></p>
+<section id="id1">
+<h2>Что такое ML System Design Doc<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p>ML System Design документ - это по сути сводный план по построению системы машинного обучения для решения конкретного запроса бизнеса в вашей компании.
+Его стоит применять на этапе дизайна вашей системы, чтобы в итоге ваше решение было полезным для бизнеса, а именно: могло быть внедрено, работало после внедрения и приносило реальную пользу.</p>
+<p>А для того, чтобы этот план было проще построить, и чтобы итоговая система, действительно, приводила к результату, мы в сообществе <a class="reference external" href="https://t.me/reliable_ml">Reliable ML</a> разработали <a class="reference external" href="https://github.com/IrinaGoloshchapova/ml_system_design_doc_ru/blob/main/ML_System_Design_Doc_Template.md">шаблон такого документа</a>.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/12476970/227248587-11e2f92f-51ad-4edb-9eab-1dc4b8f8e902.png" /></p>
+</section>
+<section id="id2">
+<h2>Зачем нужен ML System Design Doc<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<p>Дизайн-документ, созданный на этапе проектирования системы, помогает Data Science подразделению:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Структурировать собственные мысли: БТ, архитектура решения, результат, применение</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Задать все критические вопросы бизнесу, уточнить бизнес-требования</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Понять бизнес-процесс и нюансы применения ML-системы</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Понять, что реализация проекта возможна и какие ожидают трудности</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Синхронизировать ожидания технической и бизнес-команд</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Установить стандарты работы</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>Как составить ML System Design Doc<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Скачать <a class="reference external" href="https://github.com/IrinaGoloshchapova/ml_system_design_doc_ru/blob/main/ML_System_Design_Doc_Template.md">шаблон документа от Reliable ML</a> и загрузить его в общее рабочее пространство вашей компании или сделать форк репозитория и работать в нем</p></li>
+<li><p>Прочитать краткие рекомендации по процессу заполнения документа (workflow) - <a class="reference external" href="https://github.com/IrinaGoloshchapova/ml_system_design_doc_ru/blob/main/ML_System_Design_Doc_Workflow.md">здесь</a>.</p></li>
+<li><p>Посмотреть детальный доклад о том, что такое ML System Design Doc и о том, как, когда и зачем его составлять - <a class="reference external" href="https://www.youtube.com/watch?v=PW9TGNr1Vqk">тут</a>.</p></li>
+<li><p>Приступить к работе!</p></li>
+</ul>
+</section>
+<section id="reliable-ml">
+<h2>Примеры дизайн-документов по шаблону Reliable ML<a class="headerlink" href="#reliable-ml" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/Chuguevskij/ml_system_design_doc_Revenue_in_shops"><strong>Дизайн ML-системы для FMCG компании - Прогнозирование выручки в магазинах</strong></a>. Автор: <a class="reference external" href="https://github.com/Chuguevskij">&#64;Chuguevskij</a>.  Бизнес цель – замена ручной работы прогнозами модели, которые будут использоваться для: составления плана продаж в магазинах на следующие 6 месяцев и сегментации магазинов на основе продаж для применения определенной стратегии взаимодействия.</p></li>
+<li><p><a class="reference external" href="https://github.com/nikita4099/otelit/blob/main/README.md"><strong>Дизайн ML-системы для девелопера коммерческой недвижимости - Рекомендательная система для сделок по аренде недвижимости</strong></a>. Автор: <a class="reference external" href="https://github.com/nikita4099">&#64;nikita4099</a>. Бизнес-цель – с помощью увеличения релевантности предложения компании для клиента повысить среднюю конверсию из лида в успешную сделку для арендаторов.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>Как обратиться в Reliable ML за поддержкой<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Команда <a class="reference external" href="https://t.me/reliable_ml">Reliable ML</a> готова помочь вам с работой над составлением дизайн-документа - включая ревью самой системы.</p></li>
+<li><p>В приоритете проекты, которые готовы выложить финальный документ в открытый доступ (без NDA части) - как в разделе выше.</p></li>
+<li><p>Пишите <a class="reference external" href="https://t.me/irina_goloshchapova">&#64;irina_goloshchapova</a> и <a class="reference external" href="https://t.me/promsoft">&#64;promsoft</a></p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>Материалы для дополнительного погружения в тему<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/eugeneyan/ml-design-docs">Шаблон ML System Design Doc [EN] от AWS</a> и <a class="reference external" href="https://eugeneyan.com/writing/ml-design-docs/">статья</a> с объяснением каждого раздела</p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/the-undeniable-importance-of-design-docs-to-data-scientists-421132561f3c">Верхнеуровневый шаблон ML System Design Doc от Google</a> и <a class="reference external" href="https://towardsdatascience.com/understanding-design-docs-principles-for-achieving-data-scientists-53e6d5ad6f7e">описание общих принципов его заполнения</a>.</p></li>
+<li><p><a class="reference external" href="https://www.mle-interviews.com/ml-design-template">ML Design Template</a> от ML Engineering Interviews</p></li>
+<li><p>Статья <a class="reference external" href="https://medium.com/people-ai-engineering/design-documents-for-ml-models-bbcd30402ff7">Design Documents for ML Models</a> на Medium. Верхнеуровневые рекомендации по содержанию дизайн-документа и объяснение, зачем он вообще нужен</p></li>
+<li><p><a class="reference external" href="https://madewithml.com/courses/mlops/design/#timeline">Краткий Canvas для ML-проекта от Made with ML</a>. Подходит для верхнеуровневого описания идеи, чтобы понять, имеет ли смысл идти дальше.</p></li>
+</ul>
 </section>
 </section>
 
@@ -467,7 +515,12 @@ in the Sphinx ecosystem.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Что такое ML System Design Doc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Зачем нужен ML System Design Doc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Как составить ML System Design Doc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reliable-ml">Примеры дизайн-документов по шаблону Reliable ML</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Как обратиться в Reliable ML за поддержкой</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Материалы для дополнительного погружения в тему</a></li>
 </ul>
   </nav></div>
 
