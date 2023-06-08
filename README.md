@@ -1,5 +1,5 @@
 # Reliable ML
 
-[Здесь](https://reliable-ml.ru/) будет целая сова.
+[Здесь](https://promsoft.github.io/reliablemlbook.github.io/) будет целая сова.
 
 ![](HowToDrawOwl.jpg)
