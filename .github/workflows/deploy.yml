@@ -31,6 +31,11 @@ jobs:
       run: |
         jupyter-book build reliablemlbook
 
+    # CNAME
+    - name: CNAME
+      run: |
+        cp CNAME reliablemlbook/_build/html/
+
 
     # Deploy the book's HTML to gh-pages branch
     - name: GitHub Pages action
