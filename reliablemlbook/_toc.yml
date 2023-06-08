@@ -7,7 +7,7 @@ parts:
   - caption: "Введение"
     chapters:
     - file: introduction
-  - caption: "Концепция Reliable ML: бизнес"
+  - caption: "Reliable ML: бизнес"
     chapters:
     - file: project-selection
     - file: ml-design-doc
@@ -16,12 +16,12 @@ parts:
     - file: pylot
     - file: delivery
     - file: monitoring
-  - caption: "Концепция Reliable ML: техника"
+  - caption: "Reliable ML: техника"
     chapters:
     - file: interpretable-ml
     - file: causal-inference-ml
     - file: mlops
     - file: data-sentric-ai
-  - caption: "Тренды будущего"
+  - caption: "Reliable ML: тренды"
     chapters:
     - file: trends
