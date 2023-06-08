@@ -1,13 +1,9 @@
 # Выбор ML-проекта
 
-Whether you write your book's content in Jupyter Notebooks (`.ipynb`) or
-in regular markdown files (`.md`), you'll write in the same flavor of markdown
-called **MyST Markdown**.
-This is a simple file to help you get started and show off some syntax.
+Как выбрать направление работы, которое будет наиболее полезно компании.
 
-## What is MyST?
+Правильно собрать портфель проектов.
 
-MyST stands for "Markedly Structured Text". It
-is a slight variation on a flavor of markdown called "CommonMark" markdown,
-with small syntax extensions to allow you to write **roles** and **directives**
-in the Sphinx ecosystem.
+Идентифицировать стейкхолдеров?
+
+Роли в команде.
