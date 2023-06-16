@@ -10,7 +10,6 @@ parts:
   - caption: "Reliable ML: бизнес"
     chapters:
     - file: project-selection
-    - file: ml-design-doc
     - file: ml-system-design
     - file: prototype
     - file: pylot
