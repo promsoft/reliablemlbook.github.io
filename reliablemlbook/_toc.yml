@@ -24,3 +24,7 @@ parts:
   - caption: "ReliableML: тренды"
     chapters:
     - file: trends
+  - caption: "Приложения"
+    chapters:
+    - file: design-doc-template
+    - file: literature
