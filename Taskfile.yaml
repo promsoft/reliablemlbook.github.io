@@ -14,3 +14,8 @@ tasks:
       - jupyter-book build reliablemlbook/ --builder pdflatex
       - cp reliablemlbook/_build/latex/book.pdf .
     silent: false
+  links:
+    cmds:
+      - jupyter-book clean reliablemlbook/
+      - jupyter-book build reliablemlbook/ --builder linkcheck
+    silent: false
