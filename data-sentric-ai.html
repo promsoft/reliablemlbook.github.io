@@ -354,9 +354,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -372,14 +370,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -391,17 +381,38 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-centric-ai">
 <h1>Data Centric AI<a class="headerlink" href="#data-centric-ai" title="Permalink to this heading">#</a></h1>
-<p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
-in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
-called <strong>MyST Markdown</strong>.
-This is a simple file to help you get started and show off some syntax.</p>
-<section id="what-is-myst">
-<h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Permalink to this heading">#</a></h2>
-<p>MyST stands for “Markedly Structured Text”. It
-is a slight variation on a flavor of markdown called “CommonMark” markdown,
-with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
-in the Sphinx ecosystem.</p>
-</section>
+<p>Датацентричный подход (Data Centric AI) - набор подходов и техник, позволяющий улучшить набор данных, на котором учится наша модель. Часто работа над качеством данных - самый надежный путь для улучшения качества ML-модели.</p>
+<p>Алгоритмы для поиска и исправления типичных проблем в данных, в основном в данных для обучения с учителем.</p>
+<p>Классический подход Model Centric AI концентрируется на том, чтобы подобрать лучшую модель для имеющегося датасета, используя разные типы моделей (нейронные сети, решающие деревья и т.д.), техники (регуляризация, оптимизаторы функции потерь), техники подбора гиперпараметров и ансамблирование моделей. Все это делается исходя из предположения, что данные для обучения фиксированы и повлиять на них нельзя.</p>
+<p>В реальных приложениях данные чаще всего не фиксированы - мы можем модифицировать датасет, собирать дополнительные данные, перепроверять разметку и исключать данные, вносящие шум.</p>
+<p>Данные в реальных проектах часто грязные, и содержат столько проблем, что улучшение набора данных обычно - обязательный шаг на пути к хорошей модели. Как часто говорят, мусор на входе - мусор на выходе.</p>
+<p>Data Centric AI - cистематический подход к работе с данными для того, чтобы модели на них обучались лучше.</p>
+<p>Два основных подхода:</p>
+<ol class="arabic simple">
+<li><p>Алгоритмы, анализирующие данные и использующие эту информацию для улучшения модели. Например, Curriculum Learning - обучение модели сначала на простых данных, а потом на сложных.</p></li>
+<li><p>Алгоритмы, модифицирующие данные для того, чтобы улучшить модель. Confident Learning - пример такого подхода, в котором модель учится на данных, из которых удалены ошибочно размеченные данные.</p></li>
+</ol>
+<p>Определение “легких для обучения” и ошибочно размеченных данных выполняется автоматическм с помощью алгоритма, анализирующего работу обученной ML - модели.</p>
+<p>Задача Model Centric AI - построить наилучшую модель для имеющегося датасета.
+Задача Data Centric AI - систематически и алгоритмически улучшать датасет, чтобы сделать его более полезным для модели. Для получения хорошего результата нужно сочетать оба подхода.</p>
+<p>Например, процесс построения ML-модели может выглядеть так:</p>
+<ol class="arabic simple">
+<li><p>Проводим разведочный анализ данных (Exploratory Data Analysis). Исправляем основые проблемы данных. Преобразуем их в формат, удобный для моделирования.</p></li>
+<li><p>Обучаем черновую (baseline) версию модели.</p></li>
+<li><p>Используя модель, улучшаем набор данных.</p></li>
+<li><p>Обучаем модель на улучшенном датасете. При необходимости возвращаемся на шаг 3 и пробуем сделать данные еще лучше.</p></li>
+</ol>
+<p>Пример техник, используемых в датацентричном подходе:</p>
+<ul class="simple">
+<li><p>Детектирование и исключение аномалий</p></li>
+<li><p>Выявление и коррекция ошибок разметки</p></li>
+<li><p>Поиск консенсуса в разметке, полученной из разных источников</p></li>
+<li><p>Аугментация данных (добавление данных в модель на основе априорного знания о природе данных)</p></li>
+<li><p>Генерация и отбор признаков</p></li>
+<li><p>Активное обучение - выбор наиболее информативных данных для доразметки</p></li>
+<li><p>Cirriculum Learning - упорядочивание примеров для обучения от простого к сложному</p></li>
+</ul>
+<p>Надежность ML-модели в значительной степени зависит от качества данных, на которых она обучалась.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -462,20 +473,6 @@ in the Sphinx ecosystem.</p>
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-myst">What is MyST?</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
