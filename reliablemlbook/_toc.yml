@@ -21,6 +21,7 @@ parts:
     - file: causal-inference-ml
     - file: mlops
     - file: data-sentric-ai
+    - file: mlsec
   - caption: "ReliableML: тренды"
     chapters:
     - file: trends
