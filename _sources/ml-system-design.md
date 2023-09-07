@@ -1,13 +1,8 @@
 # ML System Design
 
-Whether you write your book's content in Jupyter Notebooks (`.ipynb`) or
-in regular markdown files (`.md`), you'll write in the same flavor of markdown
-called **MyST Markdown**.
-This is a simple file to help you get started and show off some syntax.
+Дизайн системы машинного обучения - этап, который наступает после того, как вы выбрали идею для реализации. Для того, чтобы модель, которую вы собираетесь построить, не только заработала, но и была внедрена в бизнес и принесла ощутимый финансовый результат, о многом необходимо подумать заранее.  
+`место для оглавления раздела - взять отдельные (все?) темы для книги из курса`
 
-## What is MyST?
+## ML System Design Doc
 
-MyST stands for "Markedly Structured Text". It
-is a slight variation on a flavor of markdown called "CommonMark" markdown,
-with small syntax extensions to allow you to write **roles** and **directives**
-in the Sphinx ecosystem.
+ML System Design документ - это по сути сводный план по построению системы машинного обучения для решения конкретного запроса бизнеса в вашей компании. Его стоит применять на этапе дизайна вашей системы, чтобы в итоге ваше решение было полезным для бизнеса, а именно: могло быть внедрено, работало после внедрения и приносило реальную пользу.  
